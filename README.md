@@ -51,3 +51,13 @@ NNNN
 ```
 
 Each region seems to be framed by two lines reading `ZCZC` and `NNNN`. 
+
+### Region Code and Name
+
+```
+gggg105
+GG105 Engadin
+```
+
+The first two lines of the content describe the region code and name. In Germany the region code is identical to the
+[GAFOR](https://de.wikipedia.org/wiki/GAFOR) code.
