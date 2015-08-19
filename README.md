@@ -39,3 +39,15 @@ hh:mm [C] [C]    2km  3km  4km  5km [m/s] [octas] [m] - [m]  [octas] [deg/kt]   
 18:00  21   3 ---:....:----:----:--                          0  0  1    9  8                   |  0.21 3000  351  6
 NNNN
 ```
+
+## Description
+
+### Framing
+
+```
+ZCZC
+...
+NNNN
+```
+
+Each region seems to be framed by two lines reading `ZCZC` and `NNNN`. 
