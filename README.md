@@ -2,7 +2,32 @@
 
 This is a reverse-engineered description of the forecast file format used by the [DWD TopTherm](http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop?_nfpb=true&portletMasterPortlet_i1gsbDocumentPath=Content%2FLuftfahrt%2FInternetservice%2Fjtt.html) application.
 
-## Example
+
+## Download URL
+
+The forecast files can be downloaded as bzip2 archives from the following URL:
+
+https://www.flugwetter.de/scripts/getfile.php?src=jtt/15082106p12.gra.bz2
+
+- `150821` - this forecast is for the `2015-08-21` date
+- `06` - ???
+- `p12` - ???
+
+
+### Examples
+
+    Yesterday:            jtt/15081806.gra.bz2
+    Today:                jtt/15081906.gra.bz2
+    Tomorrow:             jtt/15082006p12.gra.bz2
+    Day after tomorrow:   jtt/15082106p12.gra.bz2
+
+These URLs were downloaded by the original Java application at `2015-08-19T17:55:00Z`.
+
+
+## Format Example
+
+This shows the forecast of the region "Engadin". The file inside the bzip2 archive contains all regions, each divided
+by two blank lines.
 
 ```
 ZCZC
@@ -40,7 +65,7 @@ hh:mm [C] [C]    2km  3km  4km  5km [m/s] [octas] [m] - [m]  [octas] [deg/kt]   
 NNNN
 ```
 
-## Description
+## Format Description
 
 ### Framing
 
