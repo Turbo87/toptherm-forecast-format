@@ -86,3 +86,13 @@ GG105 Engadin
 
 The first two lines of the content describe the region code and name. In Germany the region code is identical to the
 [GAFOR](https://de.wikipedia.org/wiki/GAFOR) code.
+
+
+### Forecast Date
+
+```
+, Fr 23.05.2015 [EU 00z +24h, LW, ET  30%@2300m]
+```
+
+The third line always seems to start with `, ` followed by the date that this forecast is for and some more
+unidentified information.
