@@ -96,3 +96,38 @@ The first two lines of the content describe the region code and name. In Germany
 
 The third line always seems to start with `, ` followed by the date that this forecast is for and some more
 unidentified information.
+
+
+### Forecast Columns
+
+```
+UTC     T  Td Vario [0.5m/s]       Thermik Cumuli Basis-Top CL CM CH   Wind   T  NS  tPFD  kum |  Hang  Alt   Wind   dPFD  kum
+hh:mm [C] [C]    2km  3km  4km  5km [m/s] [octas] [m] - [m]  [octas] [deg/kt]        [km] [km] | [m/s]  [m] [deg/kt] [km] [km]
+06:00   7   5 -|-:----:----:----:--           ||| 1500-1700  3  0  0   11  6                   |  0.18 3000    8  5
+06:30   8   6 -.-:....:----:----:--                          0  0  0   23  5                   |  0.18 3000   15  5
+07:30  10   6 1111112111.--:----:--  0.6               3200  0  0  0    9  6                   |  0.18 3000    9  5
+11:00  18   5 12222334444*2-----:--  1.7        * 3500-3600  1  2  0  352  6           37  170 |  0.18 3000  350  5
+13:00  21   3 122333334443***---:--  1.7       ** 3700-4300  1  5  0  333  8           38  321 |  0.18 3000  352  5
+```
+
+- `UTC` - The time in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)
+- `T` - Temperature in Degrees Celsius
+- `Td` - Dewpoint Temperature in Degrees Celsius
+- `Vario` - `n` times 0.5 m/s
+    - `-` and `:` - Placeholder
+    - `.` - ??? 
+    - `|` - ??? 
+- `Thermik` - Average thermal strength ?
+- `Cumuli` - `n/8` of [cumulus](https://en.wikipedia.org/wiki/Cumulus_cloud) cloud cover
+- `Basis-Top` - Base and top height of the cumulus cloud layer in metres
+- `CL CM CH` - `n/8` of low, medium and high clouds
+- `Wind` - Boundary layer wind ?
+- `T` - ???
+- `NS` - ???
+- `tPFD` - Potential flight distance using Thermals ?
+- `kum` - Accumulated `tPFD` column
+- `Hang` - Ridge uplift ? in metres per second
+- `Alt` - ???
+- `Wind` - Wind at the ground ?
+- `dPFD` - Potential flight distance using ridges and waves ?
+- `kum` - Accumulated `dPFD` column
